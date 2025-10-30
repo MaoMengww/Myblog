@@ -1,58 +1,26 @@
 ---
-title: Simple Guides for Mizuki
+title: 博客，启航！
 published: 2024-04-01
-description: "How to use this blog template."
-image: "./cover.jpeg"
-tags: ["Mizuki", "Blogging", "Customization"]
-category: Guides
+description: "我的第一个post"
+image: "./cover.jpg"
+tags: ["感想"]
+category: 日常
 draft: false
 ---
 
 
 
-This blog template is built with [Astro](https://astro.build/). For the things that are not mentioned in this guide, you may find the answers in the [Astro Docs](https://docs.astro.build/).
-
-## Front-matter of Posts
-
-```yaml
----
-title: My First Blog Post
-published: 2023-09-09
-description: This is the first post of my new Astro blog.
-image: ./cover.jpg
-tags: [Foo, Bar]
-category: Front-end
-draft: false
----
-```
 
 
 
 
-| Attribute     | Description                                                                                                                                                                                                 |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `title`       | The title of the post.                                                                                                                                                                                      |
-| `published`   | The date the post was published.                                                                                                                                                                            |
-| `pinned`      | Whether this post is pinned to the top of the post list.                                                                                                                                                   |
-| `description` | A short description of the post. Displayed on index page.                                                                                                                                                   |
-| `image`       | The cover image path of the post.<br/>1. Start with `http://` or `https://`: Use web image<br/>2. Start with `/`: For image in `public` dir<br/>3. With none of the prefixes: Relative to the markdown file |
-| `tags`        | The tags of the post.                                                                                                                                                                                       |
-| `category`    | The category of the post.                                                                                                                                                                                   |
-| `licenseName` | The license name for the post content.                                                                                                                                                                      |
-| `author`      | The author of the post.                                                                                                                                                                                     |
-| `sourceLink`  | The source link or reference for the post content.                                                                                                                                                          |
-| `draft`       | If this post is still a draft, which won't be displayed.                                                                                                                                                    |
+#### 感想
+​	弄了半天终于快给这博客弄好了，不得不感叹hexo真厉害，一点前端知识都没有硬是把个人博客给写出来了。往常也没有写博客写日记发qq空间的习惯，因此我以后也只能随缘更新了。从现在开始，我也是个有脸的程序员了。
 
-## Where to Place the Post Files
+​	就像之前看cyjj博客一样，我不想成为一个增删改查的后端牛马，更想成为一个计算机的掌控者。与君共勉，加油！
 
 
 
-Your post files should be placed in `src/content/posts/` directory. You can also create sub-directories to better organize your posts and assets.
 
-```
-src/content/posts/
-├── post-1.md
-└── post-2/
-    ├── cover.png
-    └── index.md
-```
+
+

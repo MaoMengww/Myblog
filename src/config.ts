@@ -26,8 +26,8 @@ export const siteConfig: SiteConfig = {
 	lang: SITE_LANG,
 
 	themeColor: {
-		hue: 240, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
-		fixed: false, // 对访问者隐藏主题色选择器
+		hue: 200, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
+		fixed: true, // 对访问者隐藏主题色选择器
 	},
 
 	// 特色页面开关配置(关闭不在使用的页面有助于提升SEO,关闭后直接在顶部导航删除对应的页面就行)
@@ -35,7 +35,7 @@ export const siteConfig: SiteConfig = {
 		anime: false, // 番剧页面开关
 		diary: true, // 日记页面开关
 		friends: true, // 友链页面开关
-		projects: false, // 项目页面开关
+//		projects: false, // 项目页面开关
 		skills: true, // 技能页面开关
 		timeline: true, // 时间线页面开关
 		albums: true, // 相册页面开关
@@ -253,16 +253,16 @@ export const navBarConfig: NavBarConfig = {
 			url: "#",
 			icon: "material-symbols:more-horiz",
 			children: [
-				{
-					name: "Projects",
-					url: "/projects/",
-					icon: "material-symbols:work",
-				},
-				{
-					name: "Skills",
-					url: "/skills/",
-					icon: "material-symbols:psychology",
-				},
+//				{
+//					name: "Projects",
+//					url: "/projects/",
+//					icon: "material-symbols:work",
+//				},
+//				{
+//					name: "Skills",
+//					url: "/skills/",
+//					icon: "material-symbols:psychology",
+//				},
 				{
 					name: "Timeline",
 					url: "/timeline/",
@@ -497,26 +497,43 @@ export const sakuraConfig: SakuraConfig = {
 // Pio 看板娘配置
 export const pioConfig: import("./types/config").PioConfig = {
 	enable: true, // 启用看板娘
-	models: ["/pio/models/pio/model.json"], // 默认模型路径
-	position: "left", // 默认位置在右侧
-	width: 280, // 默认宽度
-	height: 250, // 默认高度
-	mode: "draggable", // 默认为可拖拽模式
-	hiddenOnMobile: true, // 默认在移动设备上隐藏
+	models: [
+		"/pio/models/33.2017.school/model.default.json",
+		"/pio/models/33.2017.school/model.2016.xmas.1.json",
+		"/pio/models/33.2017.school/model.2016.xmas.2.json",
+		"/pio/models/33.2017.school/model.2017.cba-normal.json",
+		"/pio/models/33.2017.school/model.2017.newyear.json",
+		"/pio/models/33.2017.school/model.2017.summer.normal.1.json",
+		"/pio/models/33.2017.school/model.2017.summer.normal.2.json",
+		"/pio/models/33.2017.school/model.2017.tomo-bukatsu.high.json",
+		"/pio/models/33.2017.school/model.2017.tomo-bukatsu.low.json",
+		"/pio/models/33.2017.school/model.2017.valley.json",
+		"/pio/models/33.2017.school/model.2017.vdays.json",
+		"/pio/models/33.2017.school/model.2018.lover.json",
+		"/pio/models/33.2017.school/model.2018.spring.json",
+		"/pio/models/33.2017.school/33.2017.school.model.json",
+	],
+
+	position: "left", // 位置
+	width: 280, // 宽度
+	height: 250, // 高度
+	mode: "draggable", // 可拖拽模式
+	hiddenOnMobile: true, // 移动端隐藏
 	dialog: {
-		welcome: "Welcome to MaoMeng Website!", // 欢迎词
+		welcome: "欢迎来到MaoMeng的秘密小窝",
 		touch: [
-			"What are you doing?",
-			"Stop touching me!",
-			"HENTAI!",
-			"Don't bully me like that!",
+			"我喜欢的是猫梦大人",
+			"八嘎!HENTAI!无路赛",
+			"不要碰我",
+			"讨厌！",
 		], // 触摸提示
-		home: "Click here to go back to homepage!", // 首页提示
-		skin: ["Want to see my new outfit?", "The new outfit looks great~"], // 换装提示
-		close: "QWQ See you next time~", // 关闭提示
+		home: "又回来了呢，这是不是又一个循环", // 首页提示
+		skin: ["要换衣服了吗，为猫梦大人准备的新衣哦", "我可不可爱？"], // 换装提示
+		close: "QWQ 要离开我了吗", // 关闭提示
 		link: "https://github.com/matsuzaka-yuki/Mizuki", // 关于链接
 	},
 };
+
 
 // 导出所有配置的统一接口
 export const widgetConfigs = {
