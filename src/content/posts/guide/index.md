@@ -1,6 +1,6 @@
 ---
 title: 博客，启航！
-published: 2024-04-01
+published: 2025-10-30
 description: "我的第一个post"
 image: "./cover.jpg"
 tags: ["感想"]
