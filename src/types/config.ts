@@ -176,7 +176,7 @@ export type LicenseConfig = {
 // 评论配置
 
 export type CommentConfig = {
-	enable: boolean; // 是否启用评论功能
+	enable: true; // 是否启用评论功能
 	twikoo?: TwikooConfig;
 };
 
@@ -224,7 +224,7 @@ export type AnnouncementConfig = {
 };
 
 export type MusicPlayerConfig = {
-	enable: boolean; // 是否启用音乐播放器功能
+	enable: true; // 是否启用音乐播放器功能
 };
 
 export type FooterConfig = {
@@ -259,7 +259,7 @@ export type WidgetComponentConfig = {
 };
 
 export type SidebarLayoutConfig = {
-	enable: boolean; // 是否启用侧边栏
+	enable: true; // 是否启用侧边栏
 	position: "left" | "right"; // 侧边栏位置：左侧或右侧
 	components: WidgetComponentConfig[]; // 组件配置列表
 	defaultAnimation: {
