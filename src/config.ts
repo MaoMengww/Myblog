@@ -498,6 +498,7 @@ export const sakuraConfig: SakuraConfig = {
 export const pioConfig: import("./types/config").PioConfig = {
 	enable: true, // 启用看板娘
 	models: [
+		"/pio/models/33.2017.school/33.2017.school.model.json",
 		"/pio/models/33.2017.school/model.default.json",
 		"/pio/models/33.2017.school/model.2016.xmas.1.json",
 		"/pio/models/33.2017.school/model.2016.xmas.2.json",
@@ -511,7 +512,6 @@ export const pioConfig: import("./types/config").PioConfig = {
 		"/pio/models/33.2017.school/model.2017.vdays.json",
 		"/pio/models/33.2017.school/model.2018.lover.json",
 		"/pio/models/33.2017.school/model.2018.spring.json",
-		"/pio/models/33.2017.school/33.2017.school.model.json",
 	],
 
 	position: "left", // 位置
