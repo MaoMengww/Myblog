@@ -12,7 +12,7 @@ import Key from "../../i18n/i18nKey";
 import { i18n } from "../../i18n/translation";
 
 // 音乐播放器模式，可选 "local" 或 "meting"，从本地配置中获取或使用默认值 "meting"
-let mode = musicPlayerConfig.mode ?? "meting";
+let mode = musicPlayerConfig.mode ?? "local";
 // Meting API 地址，从配置中获取或使用默认地址(bilibili.uno(由哔哩哔哩松坂有希公益管理)),服务器在海外,部分音乐平台可能不支持并且速度可能慢,也可以自建Meting API
 let meting_api =
 	musicPlayerConfig.meting_api ??
@@ -63,32 +63,98 @@ let playlist = [];
 let currentIndex = 0;
 let audio: HTMLAudioElement;
 let progressBar: HTMLElement;
+// ... 接在 progressBar 声明之后
 let volumeBar: HTMLElement;
 
+// 然后开始 localPlaylist 常量
 const localPlaylist = [
 	{
 		id: 1,
-		title: "ひとり上手",
-		artist: "Kaya",
-		cover: "assets/music/cover/hitori.jpg",
-		url: "assets/music/url/hitori.mp3",
-		duration: 240,
+		title: "夜の向日葵",
+		artist: "松本文紀",
+		cover: "assets/music/cover/-464461995.jpg",
+		url: "assets/music/url/夜の向日葵-松本文紀-wy_4937357.mp3",
+		duration: 164,
 	},
 	{
 		id: 2,
-		title: "眩耀夜行",
-		artist: "スリーズブーケ",
-		cover: "assets/music/cover/xryx.jpg",
-		url: "assets/music/url/xryx.mp3",
-		duration: 180,
+		title: "Autumn Howl-She is Legend",
+		artist: "She is Legend",
+		cover: "assets/music/cover/1609079031.jpg",
+		url: "assets/music/url/Autumn Howl-She is Legend-wy_2135692004.mp3",
+		duration: 277,
 	},
 	{
 		id: 3,
-		title: "春雷の頃",
-		artist: "22/7",
-		cover: "assets/music/cover/cl.jpg",
-		url: "assets/music/url/cl.mp3",
-		duration: 200,
+		title: "Beneath the Mask",
+		artist: "Lyn",
+		cover: "assets/music/cover/-1488448244.jpg",
+		url: "assets/music/url/Beneath the Mask-Lyn-wy_454224842.mp3",
+		duration: 277,
+	},
+	{
+		id: 4,
+		title: "flowers",
+		artist: "Hana Hope",
+		cover: "assets/music/cover/1087337926.jpg",
+		url: "assets/music/url/flowers-Hana Hope-wy_2062746061.mp3",
+		duration: 277,
+	},
+	{
+		id: 5,
+		title: "Let You Down",
+		artist: "Dawid Podsiadło",
+		cover: "assets/music/cover/-1189289122.jpg",
+		url: "assets/music/url/Let You Down-Dawid Podsiadło-wy_1979375472.mp3",
+		duration: 277,
+	},
+	{
+		id: 6,
+		title: "カゲロウ",
+		artist: "Stack",
+		cover: "assets/music/cover/-680073829.jpg",
+		url: "assets/music/url/カゲロウ-Stack-wy_27746534.mp3",
+		duration: 277,
+	},
+    {
+		id: 7,
+		title: "カワキヲアメク",
+		artist: "美波",
+		cover: "assets/music/cover/1666748834.jpg",
+		url: "assets/music/url/カワキヲアメク-美波-wy_1342950406.mp3",
+		duration: 277,
+	},
+    {
+		id: 8,
+		title: "ダイアモンド クレバス",
+		artist: "May'n",
+		cover: "assets/music/cover/1462191042.jpg",
+		url: "assets/music/url/ダイアモンド クレバス-May'n-wy_610149.mp3",
+		duration: 277,
+	},
+    {
+		id: 9,
+		title: "恋は渾沌の隷也",
+		artist: "後ろから這いより隊G",
+		cover: "assets/music/cover/1151432057.jpg",
+		url: "assets/music/url/恋は渾沌の隷也-後ろから這いより隊G-wy_31967343.mp3",
+		duration: 277,
+	},
+    {
+		id: 10,
+		title: "生命線",
+		artist: "ReoNa",
+		cover: "assets/music/cover/1066928851.jpg",
+		url: "assets/music/url/生命線-ReoNa-wy_1869929814.mp3",
+		duration: 277,
+	},
+    {
+		id: 11,
+		title: "死神",
+		artist: "米津玄師",
+		cover: "assets/music/cover/1472895370.jpg",
+		url: "assets/music/url/死神-米津玄師-wy_1851022762.mp3",
+		duration: 277,
 	},
 ];
 
